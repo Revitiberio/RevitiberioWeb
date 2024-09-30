@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Revista Digital</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">   
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <video class="img-fluid w-100" loop autoplay>
+                    <source src="FotosEventos/Bienvenido a nuestra revista digital.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+        <div class="position-absolute w-100 text-right pr-5" style="top: 20px;">
+            <a href="" class="navbar-brand d-none d-lg-block">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; color: rgb(255, 255, 255);">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Revista</span>Digital</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="categoriaInstitucional.html" class="nav-item nav-link">Categorias</a>
+                    <a href="CamaraComercio.html" class="nav-item nav-link">Noticia reciente</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Eventos</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="categoriaInstitucional.html" class="dropdown-item">Institucionales</a>
+                            <a href="categoriaCultural.html" class="dropdown-item">Culturales</a>
+                            <a href="categoriaDeportiva.html" class="dropdown-item">Deportivos</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contactanos</a>
+                </div>
+                <div class="col-md-4 text-right d-none d-md-block" id="fechaActual">
+                    Cargando fecha...
+                    <script>
+                        // URL de la API para obtener la fecha actual
+                        var apiUrl = "https://worldtimeapi.org/api/timezone/Etc/UTC";
+                    
+                        // Función para obtener la fecha actual de la API
+                        function obtenerFecha() {
+                            fetch(apiUrl)
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    // Obtener la fecha y hora actual del objeto JSON
+                                    var fechaHora = new Date(data.utc_datetime);
+                                    var fecha = fechaHora.toLocaleDateString();
+                                    
+                                    // Actualizar el contenido del div con la fecha
+                                    document.getElementById("fechaActual").textContent = fecha;
+                                })
+                                .catch(error => {
+                                    console.error("Error al obtener la fecha:", error);
+                                    document.getElementById("fechaActual").textContent = "Error al cargar la fecha";
+                                });
+                        }
+                    
+                        // Llamar a la función para obtener la fecha al cargar la página
+                        obtenerFecha();
+                    </script>        
+                </div>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="Eventos">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+
+    <!-- Main News Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="owl-carousel owl-carousel-2 carousel-item-1 position-relative mb-3 mb-lg-0">
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="FotosEventos/7DAgostoIndex.png" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="7DAgosto.html">Cultural</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="7DAgosto.html">Agosto 07, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="7DAgosto.html">Conmemoración 7 de agosto dia de la batalla de Boyaca</a>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden" style="height: 435px;">
+                            <img class="img-fluid h-100" src="FotosEventos/29AGOSTOCOMETAS.jpeg" style="object-fit: cover;">
+                            <div class="overlay">
+                                <div class="mb-1">
+                                    <a class="text-white" href="29DAGOSTOCOMETAS.html">Cultural</a>
+                                    <span class="px-2 text-white">/</span>
+                                    <a class="text-white" href="29DAGOSTOCOMETAS.html">Agosto 29, 2024</a>
+                                </div>
+                                <a class="h2 m-0 text-white font-weight-bold" href="29DAGOSTOCOMETAS.html">Actividad ludica de estudiantes de grado 11</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Categorias</h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="categoriaInstitucional.html">Ver todo</a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="FotosEventos/BannerInstitucional.png" style="object-fit: cover;">
+                        <a href="categoriaInstitucional.html" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Institucionales
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="FotosEventos/BannerCultural.png" style="object-fit: cover;">
+                        <a href="categoriaCultural.html" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Culturales
+                        </a>
+                    </div>
+                    <div class="position-relative overflow-hidden" style="height: 80px;">
+                        <img class="img-fluid w-100 h-100" src="FotosEventos/BannerDeportivo.png" style="object-fit: cover;">
+                        <a href="categoriaDeportiva.html" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                            Deportivos
+                        </a>
+                    </div>
+                    <!-- SECCION REDES SOCIALES-->
+                    <div class="pb-3">
+                        <div class="bg-light py-2 px-4 mb-3">
+                            <h3 class="m-0">SIGUENOS</h3>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <a href="https://www.facebook.com/ietfelixtiberio" class="d-block py-2 px-3 text-white text-decoration-none mr-2" style="background: url('FotosEventos/Facebook Institucion.png') no-repeat center center; background-size: cover;" target="_blank">
+                                <small data-info="Texto oculto" style="color: transparent;">----------------------</small>
+                            </a>                            
+                                <a href="https://www.instagram.com/institucioneducativaftg" class="d-block py-2 px-3 text-white text-decoration-none" style="background: url('FotosEventos/Instagram Institucion.png') no-repeat center center; background-size: cover;" target="_blank">
+                                    <small data-info="Texto oculto" style="color: transparent;">----------------------</small>
+                                </a>                                
+                        </div>
+                    </div>
+                    <!-- SECCION REDES SOCIALES-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main News Slider End -->
+
+
+    <!-- Featured News Slider Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                <h3 class="m-0">Mas recientes</h3>
+                <a class="text-secondary font-weight-medium text-decoration-none" href="categoriaInstitucional.html">Ver todos</a>
+            </div>
+            <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="FotosSeccionRecientes/Votaciones.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="categoriaInstitucional.html">Institucional</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">Febrero 22, 2024</a>
+                        </div>
+                        <a class="h5 m-0 text-white" href="">Encargados del gobierno escolar 2024</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="FotosSeccionRecientes/diaTolima.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="categoriaCultural.html">Cultural</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">Abril 12, 2024</a>
+                        </div>
+                        <a class="h5 m-0 text-white" href="">Conmemoración día de el Tolima</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="FotosSeccionRecientes/diaIdioma.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="categoriaCultural.html">Cultural</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">Abril 23, 2024</a>
+                        </div>
+                        <a class="h5 m-0 text-white" href="">Conmemoración día de el idioma español</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="FotosSeccionRecientes/1erPartidoVoley.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="categoriaDeportiva.html">Deportivo</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">Mayo 02, 2024</a>
+                        </div>
+                        <a class="h5 m-0 text-white" href="">Tortuguis del 11-A se Imponen en Vibrante Duelo ante Fénix del 9-C.</a>
+                    </div>
+                </div>
+                <div class="position-relative overflow-hidden" style="height: 300px;">
+                    <img class="img-fluid w-100 h-100" src="FotosSeccionRecientes/partidoVoley10EvsProfesores.png" style="object-fit: cover;">
+                    <div class="overlay">
+                        <div class="mb-1" style="font-size: 13px;">
+                            <a class="text-white" href="categoriaDeportiva.html">Deportivo</a>
+                            <span class="px-1 text-white">/</span>
+                            <a class="text-white" href="">Mayo 07, 2024</a>
+                        </div>
+                        <a class="h5 m-0 text-white" href="">BestVoley Profesores vs. Master Voley 10-E: El Gran Choque de Volleibol.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Featured News Slider End -->
+
+
+    <!-- Category News Slider Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Institucionales</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/PersoneroContralorCategoria210.png" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaInstitucional.html">Institucional</a>
+                                    <span class="px-1">/</span>
+                                    <span>Febrero 22, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="PersoneroContralor.html">Encargados de el gobierno escolar 2024</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/CONCIENCIA.png" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaInstitucional.html">Institucional</a>
+                                    <span class="px-1">/</span>
+                                    <span>Abril 12, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="">Estudiantes y la conciencia ambiental
+                                </a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/JORNADAPEDAGOGA.png" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaInstitucional.html">Institucional</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="JornadaPedagogica1819.html">Jornada pedagógica de docentes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-3">
+                    <div class="bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Culturales</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/8DMarzo.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaCultural.html">Cultural</a>
+                                    <span class="px-1">/</span>
+                                    <span>Marzo 08, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="DiaDLaMujer.html">Conmemoración 8 de marzo dia de la mujer</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/CumTolimaPortada.png" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaCultural.html">Cultural</a>
+                                    <span class="px-1">/</span>
+                                    <span>Abril 12, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="CumpleTolima.html">Conmemoración  12 de Abril Día del Tolima</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/DiaDIDiomaPortada.jpg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="categoriaCultural.html">Cultural</a>
+                                    <span class="px-1">/</span>
+                                    <span>Abril 23, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="DiaDIdioma.html">Conmemoración día del idioma español</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Category News Slider End -->
+
+
+    <!-- Category News Slider Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-3">
+                    <div class="d-flex align-items-center bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Deportivos</h3>
+                    </div>
+                    <div class="owl-carousel owl-carousel-3 carousel-item-4 position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/TortuguisvsFenix.jpeg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Deportivo</a>
+                                    <span class="px-1">/</span>
+                                    <span>Mayo 03, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="TortuguisVSFenix.html">Tortuguis del 11-A se Imponen en Vibrante Duelo ante Fénix del 9-C.</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/GoldenVoleyVSTitanes.jpeg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Deportivo</a>
+                                    <span class="px-1">/</span>
+                                    <span>Mayo 07, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="GoldenVoleyVsLosTitanes.html">GoldenVoley 10-B vs. Los Titanes 9-B El Duelo que Definirá al Campeón.</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/BestVoleyVSMasterVoley.jpeg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Deportivo</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="BestVoleyProfesVSMasterVoley10E.html">BestVoley Profesores vs. Master Voley 10-E: El Gran Choque de Volleibol. </a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/LeonesVSVoleyClub.jpeg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Deportivo</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="voleyclub11EVSLeones9D.html">Voley Club 11-E se Imponé en un Vibrante Encuentro Contra Leones 9-D</a>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <img class="img-fluid w-100" src="FotosEventos/TortuguisVSGoldenVoley.jpeg" style="object-fit: cover;">
+                            <div class="overlay position-relative bg-light">
+                                <div class="mb-2" style="font-size: 13px;">
+                                    <a href="">Deportivo</a>
+                                    <span class="px-1">/</span>
+                                    <span>January 01, 2024</span>
+                                </div>
+                                <a class="h4 m-0" href="Partido11Avs10B.html">GoldenVoley del 10-B y Las Tortuguis del 11-A Protagonizan un Intenso Duelo.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Category News Slider End -->
+
+
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                                <h3 class="m-0">Popular</h3>
+                                <a class="text-secondary font-weight-medium text-decoration-none" href=""></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-3">
+                                <img class="img-fluid w-100" src="FotosEventos/DiaDLaMujerCategoria.png" style="object-fit: cover;">
+                                <div class="overlay position-relative bg-light">
+                                    <div class="mb-2" style="font-size: 14px;">
+                                        <a href="categoriaCultural.html">Cultural</a>
+                                        <span class="px-1">/</span>
+                                        <span>January 01, 2024</span>
+                                    </div>
+                                    <a class="h4" href="DiaDLaMujer.html">Conmemoración 8 de marzo dia  de la mujer </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mb-3">
+                                <img class="img-fluid w-100" src="FotosEventos/CumTolimaPortada2.png" style="object-fit: cover;">
+                                <div class="overlay position-relative bg-light">
+                                    <div class="mb-2" style="font-size: 14px;">
+                                        <a href="categoriaCultural.html">Cultural</a>
+                                        <span class="px-1">/</span>
+                                        <span>Abril 12, 2024</span>
+                                    </div>
+                                    <a class="h4" href="CumpleTolima.html">Conmemoración  12 de Abril Día del Tolima</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          <!-- Inicio reciente -->
+          <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Más recientes</h3>
+                    <a class="text-secondary font-weight-medium text-decoration-none" href=""></a>
+                </div>
+            </div>
+        
+            <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                    <img class="img-fluid w-100" src="FotosEventos/7DAgostoIndex.png" style="object-fit: cover;" width="600" height="300">
+                    <div class="overlay position-relative bg-light" style="min-height: 150px;">
+                        <div class="mb-2" style="font-size: 14px;">
+                            <a href="">Cultural</a>
+                            <span class="px-1">/</span>
+                            <span>Agosto 07, 2024</span>
+                        </div>
+                        <a class="h4" href="7DAgosto.html">Conmemoración del día 7 de agosto batalla de Boyacá</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                    <img class="img-fluid w-100" src="FotosEventos/CometasIndex.png" style="object-fit: cover;" width="600" height="380">
+                    <div class="overlay position-relative bg-light" style="min-height: 150px;">
+                        <div class="mb-2" style="font-size: 14px;">
+                            <a href="">Cultural</a>
+                            <span class="px-1">/</span>
+                            <span>Agosto 29, 2024</span>
+                        </div>
+                        <a class="h4" href="29DAGOSTOCOMETAS.html">Conmemoración del día 29 de agosto vuelo de cometas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                          <!-- Final reciente -->
+
+                <div class="col-lg-4 pt-3 pt-lg-0">
+                    <!-- Social Follow Start -->
+
+                    <!-- Social Follow End -->
+
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="mb-2 mt-n2 display-5 text-uppercase"><span class="text-primary">REVI</span>TIBERIO</h1>
+                </a>
+                <p>Revista creada por estudiantes para estudiantes</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-bold mb-4">Links Rápidos</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Acerca de</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Anunciar</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Políticas de privacidad</a>
+                    <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Términos y condiciones</a>
+                    <a class="text-secondary" href="#"><i class="fa fa-angle-right text-dark mr-2"></i>Contactanos</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+   
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-dark back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
